@@ -52,6 +52,7 @@ body {
 }
 
 .list {
+  list-style: none;
   width: 100%;
   height: 100%;
   display: flex;
@@ -102,110 +103,4 @@ body {
   list-style: none;
   transition: height 0.4s;
   height: 0;
-}
-/*-----------------------------------------------------*/
-@media (max-width: 576px) {
-.nav{
-    width: 195px;
-        
-}
-    
-.nav__link{
-    color: #303440;
-    display: block;
-    padding: 15px 0;
-    text-decoration: none;
-    
-        
-    
-        
-    
-}
-.nav__link:hover{
-    color: #303440;
-}
-    
-    
-.nav__link--inside{
-    border-radius: 6px;
-    padding-left: 20px;
-    text-align: left;
-    
-}
-    
-.nav__link--inside:hover{
-    background: #f6f8fa;
-    
-    
-}
-    
-
-    
-.logo_img{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    justify-content: center;
-    top: 1px;
-    left: 35px;
-    border-radius: 50%;
-    
-}
-    
-.list{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    margin-bottom: 0;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 0 16px 16px 0;
-    background: white;
-    position: relative;
-    
-        
-}
-    
-.list__item{
-    list-style-type: none;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    overflow: hidden;
-        
-    
-}
-    
-.list__item--click{
-    cursor: pointer;
-}
-    
-.list__button{
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.arrow .list__arrow{
-    transform: rotate(90deg);
-}
-    
-.list__arrow{
-    margin-left: 10;
-    transition: transform .3s;    
-    
-}
-    
-.list__show{
-    width: 80%;
-    margin-left: auto;
-    border-left: 2px solid #303440;
-    list-style: none;
-    transition: height .4s;
-    height: 0;
-    
-}
-    
 }
