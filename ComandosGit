@@ -3,4 +3,4 @@ git remote add origin https://github.com/xEliasParedes/Tienda.git #vinculacion r
 git status #muestra aquellos cambios no confirmados
 git add [nombre del archivo a agregar]o git add . #el primero solo agrega archivo especifico y el segundo todos los archivos modificados
 git commit -m "agrege mensaje"
-git push
+git push -u origin main #para subir al repositorio remoto
