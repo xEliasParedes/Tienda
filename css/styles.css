@@ -17,12 +17,15 @@ body {
 }
 /*-----------------------------ESPICIFACIONES DEL NAVEGADOR-----------------------------*/
 
+
+
 /*Nav es el elemneto que contiene el navegador*/
 .nav {
   width: 100%;
   height: auto;
   display: flex;
   position: fixed;
+  z-index: 100;/*Este parametro hace fijo el menu*/
   justify-content: center;
   text-align: center;
 }
@@ -31,7 +34,8 @@ body {
   width: auto;
   color: #000000;
   display: block;
-  padding: 15px 0;
+  
+  padding: 15px 1px;
   text-decoration: none;
   border-radius: 25%;
 }
@@ -55,7 +59,6 @@ body {
 .logo_img {
   width: 50px;
   height: 50px;
-  position: absolute;
   justify-content: center;
   top: 10px;
   left: 45px;
@@ -65,9 +68,23 @@ body {
 /*esta clase es para ubicar el contenido del titulo y logo de la pagina*/
 .list__logo{
   justify-content: center;
-  margin-right: 527px;
+  margin-right: 505px;
 
 }
+.nav__login{
+  width: auto;
+  color: #000000;
+  display: block;
+  padding: 15px 1em;
+  text-decoration: none;
+  border-radius: 25%;
+}
+
+.nav__login:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
 
 
 
@@ -82,7 +99,6 @@ body {
   justify-content: right;
   flex-direction: row;
   background: white;
-  position: relative;
   box-shadow: 0px 0px 5px black inset;
 }
 /*list__item es el contorno de cada boton*/
@@ -104,7 +120,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 0;
   
 }
@@ -130,3 +146,15 @@ body {
 /*------------------------------------------------------------------------------------------------*/
 
 /*-----------------------------ESPICIFACIONES DEL CONTENEDOR-----------------------------*/
+.carrusel{
+  height: 350px;
+  width: 750px;
+  display: flex;
+  position: relative;
+  top: 300px;
+  left: 100px;
+  justify-content: center;
+  align-items: center;
+  
+
+}
