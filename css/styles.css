@@ -68,7 +68,7 @@ body {
 /*esta clase es para ubicar el contenido del titulo y logo de la pagina*/
 .list__logo{
   justify-content: center;
-  margin-right: 505px;
+  margin-right: 650px;
 
 }
 .nav__login{
@@ -146,15 +146,16 @@ body {
 /*------------------------------------------------------------------------------------------------*/
 
 /*-----------------------------ESPICIFACIONES DEL CONTENEDOR-----------------------------*/
+
 .carrusel{
-  height: 350px;
-  width: 750px;
+  height: 100%;
+  width: 100%;
+  top: 80px;
   display: flex;
-  position: relative;
-  top: 300px;
-  left: 100px;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  background-size: cover;
   
 
 }
+
+
