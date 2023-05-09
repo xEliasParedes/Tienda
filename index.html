@@ -1,106 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perritos|Bienvenido</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
+  <body>
+    <header class="cabecera">
+      <h1 id="titulo">Bienvenido a Tienda Patitas</h1>
+      <nav class="nav">
+        <ul class="list">
+          <li class="list__logo">
+            <div class="list__button">
+              <img
+                src="/img/Logo/d2204d754ef6a0a357026981a99022e4.jpg"
+                alt="logo"
+                class="logo_img"
+              />
+              <a href="/index.html" class="nav__link">Inicio</a>
+            </div>
+          </li>
 
-        <nav class="nav">
+          <li class="list__item list__item--click">
+            <div class="list__button list__button--click">
+              <img
+                src="/icon/shopping-bag-solid-24.png"
+                alt="productos"
+                class="list__img"
+              />
+              <a href="#" class="nav__link">Productos</a>
+              <img
+                src="/icon/chevron-right-regular-24.png"
+                alt="cerrado"
+                class="list__arrow"
+              />
+            </div>
 
-            <ul class="list">
-                
-                <li class="logo">
-                    <img src="/img/d2204d754ef6a0a357026981a99022e4.jpg" alt="Logo" class="logo_img">
-                </li>
-                
+            <ul class="list__show">
+              <li class="list__inside">
+                <a href="/ropa.html" class="nav__link nav__link--inside"
+                  >Alimentos</a
+                >
+              </li>
 
-                <li class="list__item">
-                    <div class="list__button">
-                        <img src="/icon/home-solid-24.png" alt="inicio" class="list__img">
-                        <a href="https://experienciavivo.duoc.cl/alumnos" class="nav__link">Inicio</a>
-                    </div>
-                </li>
+              <li class="list__inside">
+                <a href="/seguridad.html" class="nav__link nav__link--inside"
+                  >Cuidados</a
+                >
+              </li>
 
+              <li class="list__inside">
+                <a href="/cuidado.html" class="nav__link nav__link--inside"
+                  >Accesorios</a
+                >
+              </li>
 
-                <li class="list__item list__item--click">
-                    <div class="list__button list__button--click">
-                        <img src="/icon/shopping-bag-solid-24.png" alt="productos" class="list__img">
-                        <a href="#" class="nav__link">Productos</a>
-                        <img src="/icon/chevron-right-regular-24.png" alt="cerrado" class="list__arrow">
-                    </div>
-
-                    <ul class="list__show">
-                        <li class="list__inside">
-                        <a href="https://simple.ripley.cl/search/ropa?sort=score&page=1" class="nav__link nav__link--inside">Ropa</a>
-                        </li>
-
-                        <li class="list__inside">
-                            <a href="https://www.verisure.cl/lp/m/alarmas-verisure.php?gclid=Cj0KCQjw8qmhBhClARIsANAtbodywavTdEAGBYMK-7eixm194ikHW5ASZpiK79ORngBSSb-8deQTlswaAgHnEALw_wcB&gclsrc=aw.ds" class="nav__link nav__link--inside">Seguridad</a>
-                        </li>
-
-                        <li class="list__inside">
-                            <a href="https://simple.ripley.cl/corta-unas-alicate-lima-para-perros-y-gatos-mpm00034808060?gclid=Cj0KCQjw8qmhBhClARIsANAtbof8q0vPCVJzbnMOwFfQYCL-Vo5aGLzWZ201qm7DKt1sP6hZaRLkOV8aAvEqEALw_wcB&s=mdco" class="nav__link nav__link--inside">Cuidados</a>
-                        </li>
-
-                        <li class="list__inside">
-                            <a href="https://www.cruzverde.cl/promo-medicamentos-vitaminas/?utm_source=google&utm_medium=paid_search&utm_campaign=FCV_Plan-W_Medicamentos_Search-Category_Conversion_01-04-23&utm_content=campaing&gclid=Cj0KCQjw8qmhBhClARIsANAtbofL9SszVNR70xDltcUiT2994-jLuG7typ2bnZAwYh59P55Fg8C3w5EaAoWBEALw_wcB" class="nav__link nav__link--inside">Farmacia</a>
-                        </li>
-                    </ul>
-
-                </li>
-
-                <li class="list__item">
-                    <div class="list__button">
-                        <img src="/icon/info-circle-solid-24.png" alt="Mision" class="list__img">
-                        <a href="#" class="nav__link">Mision</a>
-                    </div>
-                </li>
-
-                <li class="list__item">
-                    <div class="list__button">
-                        <img src="/icon/contact-solid-24.png" alt="Contacto" class="list__img">
-                        <a href="#" class="nav__link">Contacto</a>
-                    </div>
-                </li>
-
+              <li class="list__inside">
+                <a href="/farmacia.html" class="nav__link nav__link--inside"
+                  >Farmacia</a
+                >
+              </li>
             </ul>
-        </nav>
+          </li>
 
+          <li class="list__item list__item--click">
+            <div class="list__button list__button--click">
+              <img
+                src="/icon/info-circle-solid-24.png"
+                alt="Nosotros"
+                class="list__img"
+              />
+              <a href="#" class="nav__link">Nosotros</a>
+              <img
+                src="/icon/chevron-right-regular-24.png"
+                alt="cerrado"
+                class="list__arrow"
+              />
+            </div>
 
+            <ul class="list__show">
+              <li class="list__inside">
+                <a href="#" class="nav__link nav__link--inside">Mision</a>
+              </li>
 
+              <li class="list__inside">
+                <a href="#footer" class="nav__link nav__link--inside"
+                  >Contacto</a
+                >
+              </li>
 
-    
+              <li class="list__inside">
+                <a href="#" class="nav__link nav__link--inside">FaQ</a>
+              </li>
+            </ul>
+          </li>
 
+          <li class="list__item">
+            <div class="list__button">
+              <img
+                src="/icon/carro-de-la-carretilla.png"
+                alt="Carrito"
+                class="list__img"
+              />
+              <a href="#" class="nav__link">Carrito</a>
+            </div>
+          </li>
 
+          <li class="list__login">
+            <div class="list__button">
+              <img
+                src="/icon/usuario-de-perfil.png"
+                alt="Usuario"
+                class="list__img"
+              />
+              <a target="_blank" href="/Usuario.html" class="nav__login">Iniciar Sesion</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="container1">
+      <div id="carrusel">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="/img/Relleno/pexels-international-fund-for-animal-welfare-5486951.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/img/Relleno/pexels-neil-ryan-famoso-saraña-7107434.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>
+                  Some representative placeholder content for the second slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/img/Relleno/pexels-tima-miroshnichenko-6131568.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
 
+      <div id="texto_principal" class="texto_principal">
+        <h3>¿Que es lo que hacemos aqui?</h3>
+        <p>
+          Si eres posedor de una mascota y/o convives con una, tendras en mente
+          los productos de mejor calidad para su cuidado y bienestar al mejor
+          precio...
+          <br /><br />
+          Por ello, nosotro nos encargamos de proveerte los mejores productos y
+          servicio para tu mascota, con estilo y al mejor precio!!
+        </p>
 
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+    </section>
 
+    <section class="categoria">
+      <div class="Ctarjeta">
+        <div class="tarjeta">
+          <div class="tarjeta_cuerpo">
+            <a href="#" class="tarjeta_titulo">
+              <img
+                src="/img/Relleno/Consumo.jpg"
+                class="card-img-top"
+                alt="Consumo"
+              />Consumo</a
+            >
+          </div>
+        </div>
 
+        <div class="tarjeta">
+          <div class="tarjeta_cuerpo">
+            <a href="#" class="tarjeta_titulo">
+              <img
+                src="/img/Relleno/Cuidado.jpg"
+                class="card-img-top"
+                alt="Cuidado"
+              />Cuidado</a
+            >
+          </div>
+        </div>
 
+        <div class="tarjeta">
+          <div class="tarjeta_cuerpo">
+            <a href="#" class="tarjeta_titulo">
+              <img
+                src="/img/Relleno/Entretenimiento.jpg"
+                class="card-img-top"
+                alt="Entretenimiento"
+              />Entretenimiento</a
+            >
+          </div>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta_cuerpo">
+            <a href="#" class="tarjeta_titulo">
+              <img
+                src="/img/Relleno/Accesorio.jpg"
+                class="card-img-top"
+                alt="Accesorio"
+              />Accesorio</a
+            >
+          </div>
+        </div>
 
+        <div class="tarjeta">
+          <div class="tarjeta_cuerpo">
+            <a href="#" class="tarjeta_titulo">
+              <img
+                src="img/Relleno/Medicamento.jpg"
+                class="card-img-top"
+                alt="Medicamento"
+              />
+              Farmacia</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <footer>
+      <div class="fondo">
+        <div id="footer">
+          <div class="columna">
+            <div class="container">
+              <h3 class="tituloF">Contacto</h3>
+              <hr>
+              <h5 class="bodyF">Telefono: <a href="tel:+" class="hvf">+569 727 245 57</a></h5>
+              <h5 class="bodyF">Email: <a href="mailto:" class="hvf">el.paredes@duocuc.cl</a></h5>
+              <br>
+              <h4 class="tituloF">copyright 2023</h4>
 
+            </div>
+            <div class="container">
+              <h3 class="tituloF">Enlaces</h3>
+              <hr>
+              <h5 class="bodyF">Instagram: <a href="http://Instagram.com" target="_blank" rel="noopener noreferrer" class="hvf">@PatitasShop</a></h5>
+              <h5 class="bodyF">Facebook: <a href="http://Facebook.com" target="_blank" rel="noopener noreferrer" class="hvf">PatitasShop</a></h5>
+              
+
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-
-</body>
-
+  </body>
 </html>
