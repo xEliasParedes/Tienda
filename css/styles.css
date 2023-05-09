@@ -7,28 +7,36 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color:  #FDC830;
+  background: #ff5f6d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ffc371,
+    #ff5f6d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ffc371,
+    #ff5f6d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-attachment: fixed;
 }
 /*-----------------------------ESPICIFACIONES DEL NAVEGADOR-----------------------------*/
 
-
-
 /*Nav es el elemneto que contiene el navegador*/
 .nav {
+  top: 80px;
   width: 100%;
-  height: auto;
   display: flex;
   position: fixed;
-  z-index: 100;/*Este parametro hace fijo el menu*/
-  justify-content: center;
-  text-align: center;
+  z-index: 1; /*Este parametro hace fijo el menu*/
 }
 /* Nav__link son los item que contiene texto y hipervinculo*/
 .nav__link {
   width: auto;
   color: #000000;
   display: block;
-  
+
   padding: 15px 1px;
   text-decoration: none;
   border-radius: 25%;
@@ -60,12 +68,11 @@ body {
 }
 
 /*esta clase es para ubicar el contenido del titulo y logo de la pagina*/
-.list__logo{
+.list__logo {
   justify-content: center;
   margin-right: 650px;
-
 }
-.nav__login{
+.nav__login {
   width: auto;
   color: #000000;
   display: block;
@@ -79,21 +86,18 @@ body {
   text-decoration: none;
 }
 
-
-
-
 /*list es la clase que contiene todo lo del navegador, desde botones, sub botones y imagnes de logo*/
 .list {
   list-style: none;
   width: 100%;
   height: 100%;
   display: flex;
-  margin-bottom: 0;
-  margin: 0;
-  justify-content: right;
+  margin-bottom: 0px;
+  padding: 10px;
+  justify-content: center;
   flex-direction: row;
-  background: white;
-  box-shadow: 0px 0px 5px black inset;
+  background-color: white;
+  border: 1px solid black;
 }
 /*list__item es el contorno de cada boton*/
 .list__item {
@@ -114,9 +118,8 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 10px 10px;
-  margin: 0;
-  
+  padding: 0px;
+  margin: 1;
 }
 /*.arrow .list__arrow  es la clase conjunta con javaScript que realiza la animacion de la flecha*/
 .arrow .list__arrow {
@@ -139,15 +142,430 @@ body {
 /*list__inside no fue agregado dado que de forma predeterminada deja el boton en base a list__show*/
 /*------------------------------------------------------------------------------------------------*/
 
-/*-----------------------------ESPICIFACIONES DEL CONTENEDOR-----------------------------*/
 
-.carrusel{
-  height: 100%;
+/*-----------------------------ESPICIFACIONES DEL CONTENEDOR-----------------------------*/
+#titulo {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #303440;
+  color: white;
   width: 100%;
-  top: 80px;
+  padding: 20px;
+  text-align: center;
+}
+.cabecera {
+  width: 100%;
+  z-index: 100; /*Este parametro hace fijo el menu*/
+  position: fixed;
+}
+
+.container1 {
+  position: relative;
   display: flex;
-  position: absolute;
-  background-size: cover;
-  
+  width: 100%;
+  margin: 0px 20px 0px 20px;
+  left: 0px;
+  top: 200px;
+}
+
+.container2 {
+  position: relative;
+}
+
+#carrusel {
+  width: 600px;
+}
+
+.carousel-inner {
+  border-radius: 20px;
+  border: 2px solid #303440;
+}
+
+#texto_principal {
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 600px;
+  margin-left: 145px;
+  background-color: #f7c231;
+  border-radius: 16px;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 10px black;
+}
+
+.fondo {
+  margin: 0;
+  position: relative;
+  top: 1000px;
+  height: 300px;
+  background-color: #303440;
+}
+#footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.tituloF {
+  color: white;
+}
+
+.bodyF{
+  color:white;
+}
+.hvf{
+  text-decoration: none;
+  color: gray;
 
 }
+.columna{
+  display: flex;
+}
+
+.categoria {
+  position: relative;
+  top: 320px;
+  width: 100%;
+}
+.Ctarjeta {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.tarjeta_titulo {
+  padding-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 90px;
+}
+.tarjeta_cuerpo {
+  width: 90px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.card-img-top {
+  border-radius: 36px;
+  height: 200px;
+  width: 200px;
+}
+.tarjeta {
+  width: 30%;
+  justify-items: center;
+  margin-left: 80px;
+  border: 0;
+}
+
+.tarjeta:hover {
+  cursor: pointer;
+}
+
+.tituloFrom{
+  position: static;
+  text-align: center;
+  width: 100%;
+  
+  
+}
+.tituloIn{
+  display: block;
+  width: auto;
+  
+}
+
+.form-register{
+  background-color: #303440;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 25px 450px 125px 450px;
+
+}
+.usuario{
+  display: flex;
+}
+.Nombre{
+  width: 300px;
+  background-color: gray;
+  border: black solid 2px;
+  border-radius: 16px;
+  padding: 10px 20px;
+}
+.apellido{
+  width: 300px;
+  background-color: gray;
+  border: black solid 2px;
+  border-radius: 16px;
+  padding: 10px 20px;
+  margin-left: 50px;
+}
+.controls{
+  border-radius: 10px;
+  padding: 10px;
+
+  
+}
+.contenedorFrom{
+  width: 300px;
+  border: 0px;
+  background-color: gray;
+  border: black solid 2px;
+  border-radius: 16px;
+  padding: 10px 20px;
+}
+
+.botons{
+  font-family: "Poppins", sans-serif;
+  background-color: greenyellow;
+  box-shadow: 0 0 0 1px gray;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/*-----------------------------------------------------*/
+
+
+/*------------------------responsividadTablet------------------------------*/
+
+@media (max-width: 769px) {
+  .cabecera {
+    width: 100%;
+    z-index: 100; /*Este parametro hace fijo el menu*/
+    position: fixed;
+  }
+
+  #titulo {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: #303440;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    
+  }
+
+/*Nav es el elemneto que contiene el navegador*/
+.nav {
+  top: 60px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 1; /*Este parametro hace fijo el menu*/
+}
+/* Nav__link son los item que contiene texto y hipervinculo*/
+.nav__link {
+  width: auto;
+  color: #000000;
+  display: block;
+
+  padding: 15px 1px;
+  text-decoration: none;
+  border-radius: 25%;
+}
+/*nav__link:hover es la funcion que resalta el texto*/
+.nav__link:hover {
+  color: #000000;
+  text-decoration: none;
+}
+/*nav__link--inside son los textos de las sub_categorias*/
+.nav__link--inside {
+  border-radius: 6px;
+  padding-left: 0;
+  text-align: center;
+}
+/*nav__link--inside:hover son los textos de las sub_categorias pero resaltados*/
+.nav__link--inside:hover {
+  background: #867e71;
+  text-decoration: none;
+}
+/*logo_img es la clase que contiene el logo ademas de especificar la ubicacion y contencion*/
+.logo_img {
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  top: 10px;
+  left: 45px;
+  border-radius: 50%;
+}
+
+/*esta clase es para ubicar el contenido del titulo y logo de la pagina*/
+.list__logo {
+  justify-content: center;
+  margin-right: 0px;
+}
+.nav__login {
+  width: auto;
+  color: #000000;
+  display: block;
+  padding: 15px 1em;
+  text-decoration: none;
+  border-radius: 25%;
+}
+
+.nav__login:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*list es la clase que contiene todo lo del navegador, desde botones, sub botones y imagnes de logo*/
+.list {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 0px;
+  padding: 10px;
+  justify-content: flex-start ;
+  flex-direction: row;
+  background-color: white;
+  border: 1px solid black;
+}
+/*list__item es el contorno de cada boton*/
+.list__item {
+  list-style-type: none;
+  width: 150px;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 10px;
+}
+/*list__item--click es una sub clase donde se especifica un boton con opciones desplegables */
+.list__item--click {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+/*list__button es la clase que contiene las espcificaciones del contorno de los botones*/
+.list__button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0px;
+  margin: 1;
+}
+/*.arrow .list__arrow  es la clase conjunta con javaScript que realiza la animacion de la flecha*/
+.arrow .list__arrow {
+  transform: rotate(90deg);
+}
+/*list__arrow es la clase que contiene la imagen de la flecha desplegable*/
+.list__arrow {
+  margin-left: 0;
+  transition: transform 0.3s;
+}
+/*list__show es la clase que contiene los botones desplegables */
+.list__show {
+  width: 80%;
+  margin-left: auto;
+  border-left: 2px solid #303440;
+  list-style: none;
+  transition: height 0.4s;
+  height: 0;
+}
+/*list__inside no fue agregado dado que de forma predeterminada deja el boton en base a list__show*/
+#texto_principal {
+  padding: 10px;
+  position: relative;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  max-width: 600px;
+  background-color: #f7c231;
+  border-radius: 16px;
+  border: 1px solid #000000;
+  display: block;
+  left: 30px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.cabecera {
+  width: 100%;
+  z-index: 100; /*Este parametro hace fijo el menu*/
+  position: fixed;
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  left: 0px;
+  top: 200px;
+  
+}
+
+.container2 {
+  position: relative;
+}
+
+#carrusel {
+  position: relative;
+  width: 600px;
+  left: 30px;
+}
+
+.carousel-inner {
+  border-radius: 20px;
+  border: 4px solid #303440;
+}
+
+
+
+.fondo {
+  margin: 0;
+  position: relative;
+  top: 1000px;
+  height: 300px;
+  background-color: #303440;
+}
+#footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.tituloF {
+  color: white;
+}
+
+.categoria {
+  position: relative;
+  top: 320px;
+  width: 100%;
+}
+.Ctarjeta {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.tarjeta_titulo {
+  padding-top: 50px;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 90px;
+}
+.tarjeta_cuerpo {
+  width: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.card-img-top {
+  border-radius: 16px;
+  height: 100px;
+  width: 100px;
+}
+.card-img-top:hover{
+  cursor: pointer;
+  border-radius: 16px;
+  transition: 0.6s;
+  height: 160px;
+  width: 160px;
+}
+.tarjeta {
+  width: 30%;
+  justify-items: center;
+  margin-left: 0px;
+  border: 0;
+}
+
+.tarjeta:hover {
+  cursor: pointer;
+}
+
+}
+
+

@@ -7,13 +7,14 @@ listElements.forEach(listElement => {
 
         let height = 0;
         let menu = listElement.nextElementSibling;
-        console.log(menu.scrollHeight);
-        if(menu.clientHeight== "0"){
+        if(menu.clientHeight == "0"){
             height=menu.scrollHeight;
         }
 
-        menu.style.height = height+"px"
+        menu.style.height = `${height}px`;
 
     })
-    
 });
+/*---------------------------------------------------------- */
+
+
