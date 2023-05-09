@@ -13,7 +13,7 @@
       <br />
       <hr />
       <br />
-      <form action="/formulario" method="post">
+      <form action="/formulario" method="post" onsubmit="return validacion()">
         <div class="usuario">
           <div class="Nombre">
             <label for="nombres" class="tituloIn">Nombre</label>
@@ -65,9 +65,10 @@
         <br />
         <hr>
         <br>
-        <p>Estoy de acuerdo con <a href="#" class="hvf">Terminos y Condiciones</a></p>
+        <p style="color: white;">Estoy de acuerdo con <a href="#" class="hvf">Terminos y Condiciones</a></p>
+        <br>
         <input class="botons" type="submit" value="Registrar" />
-        <p><a href="#" class="hvf">¿Ya tengo Cuenta?</a></p>
+        <p style="color: aqua;"<a href="#" class="hvf">¿Ya tengo Cuenta?</a></p>
       </form>
     </section>
   </body>
