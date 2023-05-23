@@ -229,7 +229,10 @@ body {
   border: 2px solid #303440;
   object-fit: contain;
 }
+.textoCarru{
+  -webkit-text-stroke:0.2px#000000;
 
+}
 #texto_principal {
   padding: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
