@@ -16,5 +16,17 @@ listElements.forEach(listElement => {
     })
 });
 /*---------------------------------------------------------- */
-
+let ubicacionPrincipal = window.pageYOffset;
+window.onscroll = function(){
+    let Desplazamiento = window.pageYOffset;
+    if(ubicacionPrincipal >= Desplazamiento){
+        document.getElementById('cabecera').style.top = '0';
+        document.getElementById('navB').style.top = '80px';
+    }
+    else{
+        document.getElementById('cabecera').style.top = '-100px';
+        document.getElementById('navB').style.top = '-100px';
+    }
+    ubicacionPrincipal = Desplazamiento;
+}
 
