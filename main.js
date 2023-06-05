@@ -30,3 +30,24 @@ window.onscroll = function(){
     ubicacionPrincipal = Desplazamiento;
 }
 
+/*-----------------------------*/
+var swiper = new Swiper("#lp1 .mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    centeredSlides: false,
+    navigation: {
+      nextEl: "#lp1 .swiper-button-next",
+      prevEl: "#lp1 .swiper-button-prev",
+    },
+  });
+
+var swiper = new Swiper("#lp2 .mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    centeredSlides: false,
+    navigation: {
+      nextEl: "#lp2  .swiper-button-next",
+      prevEl: "#lp2 .swiper-button-prev",
+    },
+  });
+
