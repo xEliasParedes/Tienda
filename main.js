@@ -30,6 +30,14 @@ window.onscroll = function(){
     ubicacionPrincipal = Desplazamiento;
 }
 
+/*--------------------------------*/
+const myCarouselElement = document.querySelector('#carouselExampleCaptions2')
+
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 50000,
+  touch: false
+})
+
 /*-----------------------------*/
 var swiper = new Swiper("#lp1 .mySwiper", {
     slidesPerView: 5,
