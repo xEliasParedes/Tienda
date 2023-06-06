@@ -539,11 +539,32 @@ body {
   color: gray;
 }
 /*-----------------------------------------------------------------------VISTA USER LOGIN OR REGIST-----------------------------------------*/
+#registrar{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin: 150px 0 150px 0;
 
 
-  
-  
-  
+}
+.registrar{
+  padding: 50px;
+  width: 800px;
+  background: white;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 }
 
 

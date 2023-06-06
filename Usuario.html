@@ -5,13 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar sesión</title>
+    <link rel="icon" type="image/x-icon" href="/img/Logo/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://example.com/fontawesome/v5.15.4/js/all.js" data-auto-a11y="true" ></script>
+    
   </head>
   <body>
+
+
+    <!-- <header id="cabecera">
+      <h1 id="titulo">Bienvenido a Tienda Patitas</h1>
+      <nav class="nav" id="navB">
+        <ul class="list">
+          <li class="list__logo">
+            <div class="list__button">
+              <img src="img/Logo/d2204d754ef6a0a357026981a99022e4.jpg" alt="logo" class="logo_img" />
+              <a href="/index.html" class="nav__link">Inicio</a>
+            </div>
+          </li>
+  
+          <li class="buscador">
+            <div class="search_itean">
+              <div class="search">
+                <form action="#" method="get">
+                  <input class="buscar" type="text" name="buscador" id="search" placeholder="Buscador..." />
+                  <a href="#0" class="bottom_search"><img src="icon/lupa (1).png" alt="Lupa" class="img_lupa"></a>
+                </form>
+              </div>
+  
+  
+            </div>
+          </li>
+  
+          <li class="list__item list__item--click">
+            <div class="list__button list__button--click">
+              <img src="icon/shopping-bag-solid-24.png" alt="productos" class="list__img" />
+              <a href="#" class="nav__link">Productos</a>
+              <img src="icon/chevron-right-regular-24.png" alt="cerrado" class="list__arrow" />
+            </div>
+  
+            <ul class="list__show">
+              <li class="list__inside">
+                <a href="/ropa.html" class="nav__link nav__link--inside">Alimentos</a>
+              </li>
+  
+              <li class="list__inside">
+                <a href="/seguridad.html" class="nav__link nav__link--inside">Cuidados</a>
+              </li>
+  
+              <li class="list__inside">
+                <a href="/cuidado.html" class="nav__link nav__link--inside">Accesorios</a>
+              </li>
+  
+              <li class="list__inside">
+                <a href="/farmacia.html" class="nav__link nav__link--inside">Farmacia</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="list__item list__item--click">
+            <div class="list__button list__button--click">
+              <img src="icon/info-circle-solid-24.png" alt="Nosotros" class="list__img" />
+              <a href="#" class="nav__link">Nosotros</a>
+              <img src="icon/chevron-right-regular-24.png" alt="cerrado" class="list__arrow" />
+            </div>
+  
+            <ul class="list__show">
+              <li class="list__inside">
+                <a href="#" class="nav__link nav__link--inside">Mision</a>
+              </li>
+  
+              <li class="list__inside">
+                <a href="#footer" class="nav__link nav__link--inside">Contacto</a>
+              </li>
+  
+              <li class="list__inside">
+                <a href="#" class="nav__link nav__link--inside">FaQ</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="list__item">
+            <div class="list__button">
+              <img src="icon/carro-de-la-carretilla.png" alt="Carrito" class="list__img" />
+              <a href="#" class="nav__link">Carrito</a>
+            </div>
+          </li>
+  
+          <li class="list__login">
+            <div class="list__button">
+              <img src="icon/usuario-de-perfil.png" alt="Usuario" class="list__img" />
+              <a target="_blank" href="/Usuario.html" class="nav__login">Iniciar Sesion</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header> -->
     <section id="login" class="sec_principal">
-      
+
+      <div class="contenedor_login">
+
+        <h1>Iniciar sesion</h1>
+
+        <form action="" class="login" id="login">
+          <div class="elemento_login" id="elemento_login">
+            <label for="usuario" class="formulario_label">Usuario</label>
+            <div class="elemento_login_input">
+              <input type="text" name="usuario" id="usuario" class="formulario_input" placeholder="Nombre de Usuario">
+              <i class="formulario_validacion_estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario_input_error">El usuario tiene que tener 4 a 16 digito y solo contener numero, letras y guion bajo</p>
+          </div>
+
+        </form>
+
+      </div>
 
     </section>
+
+    <div class="area" >
+      <ul class="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+      </ul>
+    </div >
 
     <footer id="footer">
       <div class="contenedor">
@@ -36,5 +164,10 @@
         </div>
     </footer>
     
+  <script src="main.js"></script>
+  <script src="validacion.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
   </body>
 </html>

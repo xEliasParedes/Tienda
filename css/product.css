@@ -1,0 +1,15 @@
+.cont_produc{
+    background: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.content{
+    padding: 50px;
+}
+
+.content_product .cont_provedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
