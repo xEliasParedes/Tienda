@@ -110,88 +110,107 @@
   <section id="registrar" class="sec_principal">
 
     <form class="registro" id="registro">
-      <!-- Grupo:Usuario-->
-      <div class="registro__grupo" id="grupo_usuario">
-        <label for="usuario" class="registro__label">Usuario</label>
-        <div class="registro__grupo-input">
-          <input type="text" class="registro__input" name="usuario" id="usuario" placeholder="Usuario">
-          <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
-          <!-- <i class="bi bi-check-circle-fill"></i> -->
+      <h1>Registro de Sesion</h1>
+
+      <div class="fila">
+        <!-- Grupo:Usuario-->
+        <div class="registro__grupo" id="grupo__usuario">
+          <label for="usuario" class="registro__label">Usuario</label>
+          <div class="registro__grupo-input">
+            <input type="text" class="registro__input" name="usuario" id="usuario" placeholder="Usuario">
+            <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
+            <!-- <i class="bi bi-check-circle-fill"></i> -->
+          </div>
+          <p class="registro__input-error">El usuario tiene que ser de 4 a 6 digitos y solo puede contener numeros, letras y guion bajo.</p>
         </div>
-        <p class="registro__input-error">El usuario tiene que ser de 4 a 6 digitos y solo puede contener numeros, letras y guion bajo.</p>
-      </div>
 
-      <!-- Grupo:Nombre-->
-      <div class="registro__grupo" id="grupo__nombre">
-        <label for="nombre" class="registro__label">Nombre</label>
-        <div class="registro__grupo-input">
-          <input type="text" class="registro__input" name="Nombre" id="nombre" placeholder="Nombre">
-          <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
-          <!-- <i class="bi bi-check-circle-fill"></i> -->
+        <!-- Grupo:Nombre-->
+        <div class="registro__grupo" id="grupo__nombre">
+          <label for="nombre" class="registro__label">Nombre</label>
+          <div class="registro__grupo-input">
+            <input type="text" class="registro__input" name="nombre" id="nombre" placeholder="Nombre">
+            <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
+            <!-- <i class="bi bi-check-circle-fill"></i> -->
+          </div>
+          <p class="registro__input-error">El usuario tiene que ser de 4 a 6 digitos y solo puede contener numeros, letras y guion bajo.</p>
         </div>
-        <p class="registro__input-error">El usuario tiene que ser de 4 a 6 digitos y solo puede contener numeros, letras y guion bajo.</p>
       </div>
 
-      <!-- Grupo:Contraseña-->
-      <div class="registro__grupo" id="grupo__password">
-        <label for="password" class="registro__label">Contraseña</label>
-        <div class="registro__grupo-input">
-          <input type="password" class="registro__input" name="password" id="password" placeholder=" ">
-          <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
-          <!-- <i class="bi bi-check-circle-fill"></i> -->
+      <div class="fila">
+        <!-- Grupo:Contraseña-->
+        <div class="registro__grupo" id="grupo__password">
+          <label for="password" class="registro__label">Contraseña</label>
+          <div class="registro__grupo-input">
+            <input type="password" class="registro__input" name="password" id="password" placeholder=" ">
+            <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
+            <!-- <i class="bi bi-check-circle-fill"></i> -->
+          </div>
+          <p class="registro__input-error">La contraseña tiene que ser de 4 a 12 digitos</p>
         </div>
-        <p class="registro__input-error">La contraseña tiene que ser de 4 a 12 digitos</p>
-      </div>
 
-      <!-- Grupo:Contraseña2-->
-      <div class="registro__grupo" id="grupo__password2">
-        <label for="password2" class="registro__label">Repetir Contraseña</label>
-        <div class="registro__grupo-input">
-          <input type="password" class="registro__input" name="password2" id="password2" placeholder=" ">
-          <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
-          <!-- <i class="bi bi-check-circle-fill"></i> -->
+        <!-- Grupo:Contraseña2-->
+        <div class="registro__grupo" id="grupo__password2">
+          <label for="password2" class="registro__label">Repetir Contraseña</label>
+          <div class="registro__grupo-input">
+            <input type="password" class="registro__input" name="password2" id="password2" placeholder=" ">
+            <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
+            <!-- <i class="bi bi-check-circle-fill"></i> -->
+          </div>
+          <p class="registro__input-error">Ambas contraseñas deben ser iguales</p>
         </div>
-        <p class="registro__input-error">Ambas contraseñas deben ser iguales</p>
-      </div>
 
-      <!-- Grupo:Correo Electronico-->
-      <div class="registro__grupo" id="grupo__correo">
-        <label for="correo" class="registro__label">Correo Electronico</label>
-        <div class="registro__grupo-input">
-          <input type="email" class="registro__input" name="correo" id="correo" placeholder="correo@gmail.com">
-          <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
-          <!-- <i class="bi bi-check-circle-fill"></i> -->
+      </div>
+      
+
+      <div class="fila">
+
+        <!-- Grupo:Correo Electronico-->
+        <div class="registro__grupo" id="grupo__correo">
+          <label for="correo" class="registro__label">Correo Electronico</label>
+          <div class="registro__grupo-input">
+            <input type="email" class="registro__input" name="correo" id="correo" placeholder="correo@gmail.com">
+            <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
+            <!-- <i class="bi bi-check-circle-fill"></i> -->
+          </div>
+          <p class="registro__input-error">El correo solo puede contener numeros, letras y guion bajo.</p>
         </div>
-        <p class="registro__input-error">El correo solo puede contener numeros, letras y guion bajo.</p>
-      </div>
 
-      <!-- Grupo:Telefono-->
-      <div class="registro__grupo" id="grupo__telefono">
-        <label for="telefono" class="registro__label">telefono Electronico</label>
-        <div class="registro__grupo-input">
-          <input type="tel" class="registro__input" name="telefono" id="telefono" placeholder="+569--------">
-          <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
-          <!-- <i class="bi bi-check-circle-fill"></i> -->
+        <!-- Grupo:Telefono-->
+        <div class="registro__grupo" id="grupo__telefono">
+          <label for="telefono" class="registro__label">telefono </label>
+          <div class="registro__grupo-input">
+            <input type="tel" class="registro__input" name="telefono" id="telefono" placeholder="+569--------">
+            <i class="registro__validacion_estado bi bi-dash-circle-fill"></i>
+            <!-- <i class="bi bi-check-circle-fill"></i> -->
+          </div>
+          <p class="registro__input-error">El telefono solo debe contener numeros y el maximo son 9 digitos.</p>
         </div>
-        <p class="registro__input-error">El telefono solo debe contener numeros y el maximo son 8 digitos.</p>
       </div>
 
-      <!-- grupo: Terminos y concidiones-->
-      <div class="registro__grupo" id="grupo_termino">
-        <label for="termino" class="registro__label">
-          <input class="registro__checkbox" type="checkbox" name="termino" id="termino">
-          Acepto los <a href="">Terminos y condiciones</a>
-        </label>
-      </div>
+      
+      <div class="fila">
+        <div class="columna">
+          <!-- grupo: Terminos y concidiones-->
+          <div class="registro__grupo" id="grupo__termino">
+            <label for="termino" class="registro__label">
+              <input class="registro__checkbox" type="checkbox" name="termino" id="termino">
+              Acepto los <a href="">Terminos y condiciones</a>
+            </label>
+          </div>
 
-      <div class="registro_mensaje" id="registro_mensaje">
-        <p><i class="bi bi-exclamation-triangle-fill"></i> <b>Error:</b> Por favor rellene los campos faltantes.</p>
-      </div>
+          <div class="registro__mensaje" id="registro__mensaje">
+            <p><i class="bi bi-exclamation-triangle-fill"></i> <b>Error:</b> Por favor rellene los campos faltantes.</p>
+          </div>
 
-      <div class="registro__grupo registro__grupo-btn-enviar"  >
-        <button type="submit" class="registro__btn">Enviar</button>
-        <p class="registro__mensaje-exito" id="registro__mensaje-exito">Formulario enviado exitosamente!</p>
+          <div class="registro__grupo registro__grupo-btn-enviar"  >
+            <button type="submit" class="registro__btn">Enviar</button>
+            <p class="registro__mensaje-exito" id="registro__mensaje-exito">Formulario enviado exitosamente!</p>
+          </div>
+
+        </div>
+        
       </div>
+      
 
       
     </form>

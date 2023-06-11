@@ -519,11 +519,25 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.fila{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.columna{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .registro{
+  width: auto;
+  height: auto;
   z-index: 1;
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
   background: gray;
@@ -563,13 +577,15 @@ body {
 
 }
 
-.registro__input-error{
+.registro__input-error {
+  
+  padding: 10px 0px 0px 10px;
   font-size: 12px;
   margin-bottom: 0;
   display: none;
 }
 
-.registro__input-error.activo{
+.registro__input-error-activo {
   display: block;
 
 }
@@ -594,7 +610,7 @@ body {
 
 }
 
-.registro_mensaje{
+.registro__mensaje{
   height: 45px;
   line-height: 45px;
   background: #F66060;
@@ -635,6 +651,26 @@ body {
 
 .registro__btn:hover{
   box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+
+.registro__mensaje{
+  background: orange;
+  font-size: 14px;
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+  text-align:  center;
+  display: none;
+
+
+}
+
+.registro__mensaje-activo{
+  display: flex;
+}
+
+.registro__grupo{
+  width: 350px;
 }
 
 .registro__mensaje-exito{
