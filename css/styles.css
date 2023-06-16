@@ -199,6 +199,7 @@ body {
 /*------SECCION PRINCIPAL-------*/
 #sec_principal{
   margin-top: 200px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   background: #303440;
@@ -514,6 +515,60 @@ body {
   text-decoration: none;
   color: gray;
 }
+
+
+.img_cont_product {
+  display: flex;
+  margin: 10px 50px 10px 50px;
+}
+
+.cont_provedor{
+  border-bottom: 2px solid black;
+}
+
+.btn_buy button{
+  border-radius: 10px ;
+  border: 1px solid transparent;
+  padding: 10px;
+
+}
+#add_carro{
+  background: orange;
+  color: white;
+  
+}
+
+#comprar{
+  background: #0075FF;
+  color: white;
+}
+
+
+.info_entrega{
+  margin-top: 30px;
+
+}
+
+.cab_principal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ubicacion{
+  display: flex;
+  gap: 10px;
+  align-items:  center;
+}
+
+
+
+.despacho , .retiro {
+  display: flex;
+  border-radius: 10px;
+  padding-left: 20px;
+  border: 1px solid black;
+}
+
 /*-----------------------------------------------------------------------VISTA USER LOGIN OR REGIST-----------------------------------------*/
 #registrar{
   display: flex;
