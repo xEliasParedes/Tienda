@@ -15,6 +15,7 @@ listElements.forEach(listElement => {
 
     })
 });
+
 /*---------------------------------------------------------- */
 let ubicacionPrincipal = window.pageYOffset;
 window.onscroll = function(){
@@ -22,6 +23,7 @@ window.onscroll = function(){
     if(ubicacionPrincipal >= Desplazamiento){
         document.getElementById('cabecera').style.top = '-20px';
         document.getElementById('navB').style.top = '70px';
+
     }
     else{
         document.getElementById('cabecera').style.top = '-100px';
@@ -30,7 +32,9 @@ window.onscroll = function(){
     ubicacionPrincipal = Desplazamiento;
 }
 
-/*--------------------------------*/
+
+/*---------------------------------------------------------- */
+
 const myCarouselElement = document.querySelector('#carouselExampleCaptions2')
 
 const carousel = new bootstrap.Carousel(myCarouselElement, {
@@ -58,4 +62,51 @@ var swiper = new Swiper("#lp2 .mySwiper", {
       prevEl: "#lp2 .swiper-button-prev",
     },
   });
+
+  var swiper = new Swiper("#lp3 .mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    centeredSlides: false,
+    navigation: {
+      nextEl: "#lp3  .swiper-button-next",
+      prevEl: "#lp3 .swiper-button-prev",
+    },
+  });
+
+
+  var swiper = new Swiper("#lp4 .mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    centeredSlides: false,
+    navigation: {
+      nextEl: "#lp4  .swiper-button-next",
+      prevEl: "#lp4 .swiper-button-prev",
+    },
+  });
+
+
+  var swiper = new Swiper("#lp5 .mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    centeredSlides: false,
+    navigation: {
+      nextEl: "#lp5  .swiper-button-next",
+      prevEl: "#lp5 .swiper-button-prev",
+    },
+  });
+
+  var swiper = new Swiper("#lp6 .mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    centeredSlides: false,
+    navigation: {
+      nextEl: "#lp6  .swiper-button-next",
+      prevEl: "#lp6 .swiper-button-prev",
+    },
+  });
+
+
+
+
+
 

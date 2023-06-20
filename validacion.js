@@ -133,22 +133,3 @@ registro.addEventListener ('submit', (e)=> {
 });
 
 
-// registro.addEventListener('submit', (e) => {
-// 	e.preventDefault();
-
-// 	const terminos = document.getElementById('termino');
-// 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
-// 		registro.reset();
-
-// 		document.getElementById('registro__mensaje-exito').classList.add('registro__mensaje-exito-activo');
-// 		setTimeout(() => {
-// 			document.getElementById('registro__mensaje-exito').classList.remove('registro__mensaje-exito-activo');
-// 		}, 5000);
-
-// 		document.querySelectorAll('.registro__grupo-correcto').forEach((icono) => {
-// 			icono.classList.remove('registro__grupo-correcto');
-// 		});
-// 	} else {
-// 		document.getElementById('registro__mensaje').classList.add('registro__mensaje-activo');
-// 	}
-// });
