@@ -46,7 +46,7 @@ window.onscroll = function(){
     else{
         document.getElementById('cabecera').style.top = '-100px';
         document.getElementById('navB').style.top = '-100px';
-        document.getElementById('img_product').style.top = '390px';
+        document.getElementById('img_product').style.top = '0px';
     }
     ubicacionPrincipal = Desplazamiento;
 }
