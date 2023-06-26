@@ -118,7 +118,7 @@ var swiper = new Swiper("#lp6 .mySwiper", {
     anchoVentana = window.innerWidth;
     
    
-    if(anchoVentana > 1024){
+    if(anchoVentana > 1400){
       var swiper = new Swiper("#lp1 .mySwiper", {
         slidesPerView: 5,
         spaceBetween: 20,
@@ -180,7 +180,7 @@ var swiper = new Swiper("#lp6 .mySwiper", {
           prevEl: "#lp6 .swiper-button-prev",
         },
       });
-    }else if(anchoVentana > 750 && anchoVentana < 1024){
+    }else if(anchoVentana > 750 && anchoVentana < 1400){
       var swiper = new Swiper("#lp1 .mySwiper", {
         slidesPerView: 4,
         spaceBetween: 20,
