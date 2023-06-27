@@ -49,7 +49,7 @@ const carousel = new bootstrap.Carousel(myCarouselElement, {
 /*-----------------------------*/
 
 var swiper = new Swiper("#lp1 .mySwiper", {
-  slidesPerView: 5,
+  slidesPerView: 4,
   spaceBetween: 20,
   centeredSlides: false,
   navigation: {
@@ -59,7 +59,7 @@ var swiper = new Swiper("#lp1 .mySwiper", {
 });
 
 var swiper = new Swiper("#lp2 .mySwiper", {
-  slidesPerView: 5,
+  slidesPerView: 4,
   spaceBetween: 20,
   centeredSlides: false,
   navigation: {
@@ -69,7 +69,7 @@ var swiper = new Swiper("#lp2 .mySwiper", {
 });
 
 var swiper = new Swiper("#lp3 .mySwiper", {
-  slidesPerView: 5,
+  slidesPerView: 4,
   spaceBetween: 20,
   centeredSlides: false,
   navigation: {
@@ -80,7 +80,7 @@ var swiper = new Swiper("#lp3 .mySwiper", {
 
 
 var swiper = new Swiper("#lp4 .mySwiper", {
-  slidesPerView: 5,
+  slidesPerView: 4,
   spaceBetween: 20,
   centeredSlides: false,
   navigation: {
@@ -91,7 +91,7 @@ var swiper = new Swiper("#lp4 .mySwiper", {
 
 
 var swiper = new Swiper("#lp5 .mySwiper", {
-  slidesPerView: 5,
+  slidesPerView: 4,
   spaceBetween: 20,
   centeredSlides: false,
   navigation: {
@@ -101,7 +101,7 @@ var swiper = new Swiper("#lp5 .mySwiper", {
 });
 
 var swiper = new Swiper("#lp6 .mySwiper", {
-  slidesPerView: 5,
+  slidesPerView: 4,
   spaceBetween: 20,
   centeredSlides: false,
   navigation: {
@@ -180,7 +180,7 @@ var swiper = new Swiper("#lp6 .mySwiper", {
           prevEl: "#lp6 .swiper-button-prev",
         },
       });
-    }else if(anchoVentana > 750 && anchoVentana < 1400){
+    }else if(anchoVentana > 320 && anchoVentana < 1400){
       var swiper = new Swiper("#lp1 .mySwiper", {
         slidesPerView: 4,
         spaceBetween: 20,
