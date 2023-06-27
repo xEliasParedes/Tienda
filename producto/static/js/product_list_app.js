@@ -31,7 +31,7 @@ stockProductos.forEach((producto) => {
     div.innerHTML = `
 
     <div class="card">
-        <img src=${producto.img} class = "card-img-top" alt="...">
+        <img src="${producto.img}'" class = "card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">${producto.nombre}</h5>
         <p class="card-text">${producto.desc}</p>
@@ -116,7 +116,7 @@ const actualizarCarrito = () => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
         div.innerHTML = `
-        <a href="producto.html">${prod.nombre}</a>
+        <a href="{% url 'producto'%}">${prod.nombre}</a>
         <p>Precio:${prod.precio_new}</p>
         <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
         <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="bi bi-trash-fill"></i></button>

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,19 +12,113 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+  <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
 </head>
 
 <body>
   <header id="cabecera">
     <h1 id="titulo">Bienvenido a Tienda Patitas</h1>
+    <nav class="nav_" id="navC">
+      <ul class="list">
+        <div class="nav_fila">
+          <div class="nav_column" id="n1">
+            <li class="list__item ">
+              <div class="list__button " id="menu">
+                <h1><i class="bi bi-list"></i></h1>
+                <div class="cont_list_item">
+                  <a href="#" class="nav__link">Menu</a>
+                </div>
+                
+              </div>
+            </li>
+    
+            <li class="list__logo">
+              <div class="list__button">
+                <img src="{% static 'img/Logo/d2204d754ef6a0a357026981a99022e4.jpg'%}" alt="logo" class="logo_img" />
+                <a href="{% url 'index'%}" class="nav__link">Inicio</a>
+              </div>
+            </li>
+          </div>
+
+          <div class="nav_column" id="n2">
+          
+
+            <li class="list__login">
+              <div class="list__button">
+                <img src="{% static 'icon/usuario-de-perfil.png'%}" alt="Usuario" class="list__img" />
+                <a target="_blank" href="{% url 'login'%}" class="nav__login">Iniciar Sesion</a>
+              </div>
+            </li>
+    
+            <li class="list__item">
+              <div class="list__button">
+                <img src="{% static 'icon/carro-de-la-carretilla.png'%}" alt="Carrito" class="list__img" />
+                <a href="{% url 'list_product'}" class="nav__link">Carrito</a>
+              </div>
+            </li>
+          </div>
+        </div>
+
+        <div class="nav_fila">
+          <div class="nav_column" id="n3">
+            <li class="buscador">
+              <div class="search_itean">
+                <div class="search">
+                  <form action="#" method="get" id="search">
+                    <input class="buscar" type="text" name="buscador" id="search" placeholder="Buscador..." />
+                    <button type="submit" id="lupa"><i class="bi bi-search"></i></button>
+                  </form>
+                </div>
+    
+    
+              </div>
+            </li>
+          </div>
+
+        </div>
+        
+
+        
+        
+        
+      </ul>
+    </nav>
+
+    <nav class="nav_" id="desplegable">
+      <ul class="list" id="desplegable_menu">
+        <li class="group_item_sec">
+          <h2 class="title_list_item">productos</h2>
+          <ul class="group_item">
+            <li class="item_list"><a href="listado_producto.html">Consumo</a></li>
+            <li class="item_list"><a href="listado_producto.html">Cuidado</a></li>
+            <li class="item_list"><a href="listado_producto.html">Entretenimiento</a></li>
+            <li class="item_list"><a href="listado_producto.html">Accesorios</a></li>
+            <li class="item_list"><a href="listado_producto.html">Medicamento</a></li>
+          </ul>
+        
+        </li>
+        <li class="group_item_sec">
+          <h2 class="title_list_item">informacion</h2>
+          <ul class="group_item">
+            <li class="item_list"><a href="#QF.html">preguntas Precuentes</a></li>
+            <li class="item_list"><a href="contacto.html">contactanos</a></li>
+            <li class="item_list"><a href="local.html">sucursales</a></li>
+          </ul>
+        </li>
+        
+      
+      </ul>
+      
+      
+    </nav>
+
     <nav class="nav_" id="navL">
       <ul class="list">
         <li class="list__logo">
           <div class="list__button">
-            <img src="img/Logo/d2204d754ef6a0a357026981a99022e4.jpg" alt="logo" class="logo_img" />
-            <a href="/index.html" class="nav__link">Inicio</a>
+            <img src="{% static 'img/Logo/d2204d754ef6a0a357026981a99022e4.jpg'%}" alt="logo" class="logo_img" />
+            <a href="{% url 'index'%}" class="nav__link">Inicio</a>
           </div>
         </li>
 
@@ -42,40 +137,40 @@
 
         <li class="list__item list__item--click">
           <div class="list__button list__button--click">
-            <img src="icon/shopping-bag-solid-24.png" alt="productos" class="list__img" />
+            <img src="{% static 'icon/shopping-bag-solid-24.png'%}" alt="productos" class="list__img" />
             <a href="#" class="nav__link">Productos</a>
-            <img src="icon/chevron-right-regular-24.png" alt="cerrado" class="list__arrow" />
+            <img src="{% static 'icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
           </div>
 
           <ul class="list__show">
             <li class="list__inside">
-              <a href="listado_producto.html" class="nav__link nav__link--inside">Alimentos</a>
+              <a href="{% url 'list_product'%}" class="nav__link nav__link--inside">Alimentos</a>
             </li>
 
             <li class="list__inside">
-              <a href="listado_producto.html" class="nav__link nav__link--inside">Cuidados</a>
+              <a href="{% url 'list_product'%}" class="nav__link nav__link--inside">Cuidados</a>
             </li>
 
             <li class="list__inside">
-              <a href="listado_producto.html" class="nav__link nav__link--inside">Accesorios</a>
+              <a href="{% url 'list_product'%}" class="nav__link nav__link--inside">Accesorios</a>
             </li>
 
             <li class="list__inside">
-              <a href="listado_producto.html" class="nav__link nav__link--inside">Farmacia</a>
+              <a href="{% url 'list_product'%}" class="nav__link nav__link--inside">Farmacia</a>
             </li>
           </ul>
         </li>
 
         <li class="list__item list__item--click">
           <div class="list__button list__button--click">
-            <img src="icon/info-circle-solid-24.png" alt="Nosotros" class="list__img" />
+            <img src="{% static 'icon/info-circle-solid-24.png'%}" alt="Nosotros" class="list__img" />
             <a href="#" class="nav__link">Nosotros</a>
-            <img src="icon/chevron-right-regular-24.png" alt="cerrado" class="list__arrow" />
+            <img src="{% static 'icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
           </div>
 
           <ul class="list__show">
             <li class="list__inside">
-              <a href="index.html" class="nav__link nav__link--inside">Mision</a>
+              <a href="{% url 'index'%}#p1" class="nav__link nav__link--inside">Mision</a>
             </li>
 
             <li class="list__inside">
@@ -83,22 +178,22 @@
             </li>
 
             <li class="list__inside">
-              <a href="index.html" class="nav__link nav__link--inside">FaQ</a>
+              <a href="" class="nav__link nav__link--inside">FaQ</a>
             </li>
           </ul>
         </li>
 
         <li class="list__item">
           <div class="list__button">
-            <img src="icon/carro-de-la-carretilla.png" alt="Carrito" class="list__img" />
+            <img src="{% static 'icon/carro-de-la-carretilla.png'%}" alt="Carrito" class="list__img" />
             <a href="#" class="nav__link">Carrito</a>
           </div>
         </li>
 
         <li class="list__login">
           <div class="list__button">
-            <img src="icon/usuario-de-perfil.png" alt="Usuario" class="list__img" />
-            <a target="_blank" href="/Usuario.html" class="nav__login">Iniciar Sesion</a>
+            <img src="{% static 'icon/usuario-de-perfil.png'%}" alt="Usuario" class="list__img" />
+            <a target="_blank" href="{%url 'login'%}" class="nav__login">Iniciar Sesion</a>
           </div>
         </li>
       </ul>
@@ -107,7 +202,7 @@
   <section id="sec_principal" style="background: none;">
     <div class="cont_produc">
       <div class="img_cont_product">
-        <img src="/img/Relleno/carrusel2.jpg" alt="producto.jpg" id="img_product">
+        <img src="{% static 'img/Relleno/carrusel2.jpg'%}" alt="producto.jpg" id="img_product">
 
       </div>
       <div class="content">
@@ -176,7 +271,7 @@
                   <li class="despacho__item despacho__item--click">
                     <div class="list__button list__button--click">
                       <a href="#0" class="nav__link">Despacho a domicilio</a>
-                      <img src="icon/chevron-right-regular-24.png" alt="cerrado" class="list__arrow" />
+                      <img src="{% static 'icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
                     </div>
 
                     <ul class="despacho__show">
@@ -227,7 +322,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -244,7 +339,7 @@
 
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -261,7 +356,7 @@
 
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -278,7 +373,7 @@
 
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -294,7 +389,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -310,7 +405,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -326,7 +421,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -342,7 +437,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -358,7 +453,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -374,7 +469,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -390,7 +485,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -406,7 +501,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -448,7 +543,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -465,7 +560,7 @@
 
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -482,7 +577,7 @@
 
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -499,7 +594,7 @@
 
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -515,7 +610,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -531,7 +626,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -547,7 +642,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -563,7 +658,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -579,7 +674,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -595,7 +690,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -611,7 +706,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -627,7 +722,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="img/Relleno/producto1.jpg" class="card-img-top" alt="...">
+                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">DRAGPHARMA</h5>
                     <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
@@ -686,11 +781,9 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
-  <script src="product.js"></script>
+  <script src="{% static 'js/product.js'%}"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script defer src="stock.js"></script>
-  <script defer src="modal.js"></script>
-  <script defer src="app.js"></script>
+  
 
   
 </body>
