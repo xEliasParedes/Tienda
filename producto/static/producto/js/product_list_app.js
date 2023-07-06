@@ -31,7 +31,7 @@ stockProductos.forEach((producto) => {
     div.innerHTML = `
 
     <div class="card">
-        <img src="${producto.img}'" class = "card-img-top" alt="...">
+        <img src="" class = "card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">${producto.nombre}</h5>
         <p class="card-text">${producto.desc}</p>

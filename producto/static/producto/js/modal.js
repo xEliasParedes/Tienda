@@ -12,6 +12,7 @@ botonCerrar.addEventListener('click', ()=>{
 })
 
 contenedorModal.addEventListener('click', (event) =>{
+    console.log("funciona")
     contenedorModal.classList.toggle('modal-active')
 
 })
@@ -19,3 +20,14 @@ modalCarrito.addEventListener('click', (event) => {
     event.stopPropagation() //cuando clickeo sobre el modal se finaliza la propagacion del click a los elementos
     //padre
 })
+
+/*---------------------------------------------------*/
+// Funciones para abrir y cerrar el modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
