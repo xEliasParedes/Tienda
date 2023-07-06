@@ -36,7 +36,7 @@ body {
 /*!-----------HEADER-CABECERA------------*/
 
 #cabecera {
-  top: -22px;
+  top: -18px;
   width: 100%;
   z-index: 4;
   /*Este parametro hace fijo el menu*/
@@ -55,6 +55,57 @@ body {
   text-align: center;
 }
 
+#nav {
+  transition: 1s;
+}
+
+.nav_fila{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav_column{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#n1{
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+
+}
+#n2{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+}
+
+#carrito_item2, #producto_item2, #nosotros_item2 {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+#n3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+#menu{
+  display: none;
+}
+
 /*!-----------------------------ESPICIFACIONES DEL NAVEGADOR-----------------------------*/
 
 /*Nav es el elemneto que contiene el navegador*/
@@ -68,20 +119,9 @@ body {
 }
 
 /*navegador segun tamaño*/
-#desplegable {
-  display: none;
 
-}
 
-#navC {
-  display: none;
-}
 
-#navL {
-  display: flex;
-  top: 70px;
-  transition: top 0.7s;
-}
 
 /*------------------------------*/
 /* Nav__link son los item que contiene texto y hipervinculo*/
@@ -126,7 +166,7 @@ body {
 
 /*esta clase es para ubicar el contenido del titulo y logo de la pagina*/
 .list__logo {
-  margin-right: 100px;
+  margin-right: 50px;
   justify-content: center;
 }
 
@@ -135,7 +175,7 @@ body {
   width: auto;
   color: #000000;
   display: block;
-  padding: 15px 1em;
+  padding: 15px 5px;
   text-decoration: none;
   border-radius: 25%;
 }
@@ -155,7 +195,7 @@ body {
   margin-bottom: 0px;
   padding: 10px;
   justify-content: flex-end;
-  flex-direction: row;
+  flex-direction: column;
   background-color: white;
   border: 1px solid black;
 }
@@ -163,7 +203,7 @@ body {
 /*list__item es el contorno de cada boton*/
 .list__item {
   list-style-type: none;
-  width: 10%;
+  width: 15%;
   height: 100%;
   text-align: center;
   overflow: hidden;
@@ -182,7 +222,6 @@ body {
   align-items: center;
   width: 100%;
   padding: 0px;
-  margin: 1;
 }
 
 /*.arrow .list__arrow  es la clase conjunta con javaScript que realiza la animacion de la flecha*/
@@ -214,8 +253,6 @@ body {
 /*Esto modifica el buscador*/
 .buscador {
   top: 5px;
-
-  margin-right: 200px;
   position: relative;
   display: flex;
 }
@@ -239,7 +276,7 @@ body {
 }
 
 .buscar {
-  width: 300px;
+  width: 900px;
   border-radius: 23px;
   padding: 10px;
 }
@@ -478,7 +515,7 @@ body {
   border-radius: 10px;
   position: absolute;
   left: 1%;
-  top: 40%;
+  top: 160px;
   padding: 35px 21px;
   background: #bdc3c7;
 
@@ -491,7 +528,7 @@ body {
   border-radius: 10px;
   position: absolute;
   left: 96%;
-  top: 40%;
+  top: 160px;
   padding: 35px 21px;
   background: #bdc3c7;
 }
@@ -1147,7 +1184,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 12px 10px;
+  padding: 8px 10px;
   margin: 1px;
   color: #000;
   border: none;
@@ -1451,16 +1488,27 @@ p {
 
 
 
-/* X-Small devices (portrait phones, less than 576px)
-    No media query for `xs` since this is the default in Bootstrap*/
 
-
-
-
-/* XX-Large devices (larger desktops, 1400px and up)*/
 
 
 @media (max-width: 1024px) {
+
+  .nav_{
+    top: 67px;
+  }
+
+  .nav__login{
+
+    font-size: 10px;
+    padding: 15px 5px;
+
+  }
+
+
+
+  
+
+
 
   .nav__link {
     font-size: 10px;
@@ -1486,7 +1534,7 @@ p {
   }
 
   .buscar {
-    width: 200px;
+    width: 500px;
     margin: 0px;
   }
 
@@ -1552,7 +1600,7 @@ p {
 
   .list__item {
     list-style-type: none;
-    width: 14%;
+    width: 16%;
     height: 100%;
     text-align: center;
     overflow: hidden;
@@ -1579,7 +1627,7 @@ p {
     border-radius: 10px;
     position: absolute;
     left: 95%;
-    top: 40%;
+    top: 160px;
     padding: 35px 21px;
     background: #bdc3c7;
   }
@@ -1589,14 +1637,36 @@ p {
 /*Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
 
+  #carrito_item1{
+    width: auto;
+    margin-right: 10px;
+  }
+
+  #login_item1{
+    margin-left: 10px;
+    
+  }
+
+  #login_item2 .nav__link{
+    padding: 11px 5px;
+  }
+
   .title_card h4 {
     font-size: 12px;
     -webkit-text-stroke: 0px;
 
   }
 
+  #n1{
+    width: 40%; 
+  }
+
   .list {
     justify-content: space-between;
+  }
+
+  .list__item {
+    width: 17%;
   }
 
   .nav__link {
@@ -1623,7 +1693,7 @@ p {
   }
 
   .buscar {
-    width: 200px;
+    width: 500px;
     margin: 0px;
   }
 
@@ -1716,18 +1786,161 @@ p {
 
 /*Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+  .nav_input{
+    display: none ;
+  }
+
+  .cont_list_item:hover{
+    cursor: pointer;
+  }
+
+  #desplegable{
+    width: 290px;
+    height: 100%;
+    top: 125px;
+    left: 0px;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 1s ease-out ;
+  }
 
   
 
-  #navL {
+  
+
+  
+
+  .nav_input:checked + #desplegable{
+    width: 290px;
+    height: 100%;
+    top: 125px;
+    left: 0px;
+    display: flex;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0s;
+  }
+
+  #desplegable_menu{
+    border-radius: 10px;
+    transition: 3s;
+    position: relative;
+    gap: 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  .group_item_sec{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .title_list_item{
+    text-align: left;
+    font-size: 20px;
+    margin: 2px 0px;
+
+  }
+
+  .title_list_item a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .title_list_item span{
+    text-decoration: underline;
+    font-size: 15px;
+  }
+
+  
+
+  .group_item{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+    gap: 5px;
+
+  }
+
+  .item_list a{
+
+    padding: 7px 36px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    background: whitesmoke;
+    width: 100%;
+    justify-content: left;
+
+  }
+
+  .item_list a:hover{
+    background: #3b3f4b;
+    color: white;
+  }
+
+  
+
+  .cont_list_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #n2 .list__item {
+    width: 50%;
+  }
+
+  .list{
+    width: 100%;
+  }
+
+  #titulo{
+    font-size: 20px;
+  }
+
+  .nav_{
+    top: 55px;
+  }
+
+  #na1{
+    width: 100%;
+  }
+
+  #menu {
+    width: 50px;
+  }
+
+ 
+
+  #btn_next , #btn_prev{
     display: none;
   }
-  
 
-  #navC {
-    display: flex;
-    transition: 1s;
+  #cabecera{
+    top: -7px;
   }
+
+  .nav_{
+    top: 60px;
+
+  }
+
+  #producto_item1, #nosotros_item1 {
+    display: none;
+    
+  }
+
+  #login_item1{
+    width: auto;
+  }
+
+  
 
 
   .nav_column {
@@ -1739,13 +1952,27 @@ p {
 
   }
 
-  #n1 .nav_column {
-    width: 30%;
+
+
+  #n1{
+    width: 50%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
 
+  }
+
+  #na1{
+    width: 80%;
+  }
+
+  #n2{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .filtro_list {
@@ -1778,9 +2005,11 @@ p {
     align-items: flex-start;
     justify-content: flex-start;
   }
-
+  #carrito_item1{
+    margin-right: 0;
+  }
   #n2 .list__login{
-    width: 50%;
+    width: 38%;
   }
 
 
@@ -1793,7 +2022,18 @@ p {
     justify-content: center;
   }
 
+  .nav__link{
+
+    font-size: 15px;
+    padding: 10px 5px;
+  }
+
+  .list__button{
+    display: flex;
+    flex-direction: column;
+  }
   .nav__login {
+    font-size: 15px;
     width: auto;
     color: #000000;
     display: block;
@@ -1810,7 +2050,7 @@ p {
     flex-direction: column;
   }
 
-  #menu h1 {
+  #menu h2 {
     margin: 0;
   }
 
@@ -1834,7 +2074,7 @@ p {
     width: auto;
     color: #000000;
     display: block;
-    padding: 10px 1em;
+    padding: 10px 5px;
     text-decoration: none;
     border-radius: 25%;
 }
@@ -1920,7 +2160,7 @@ p {
   }
 
   .title_card h4 {
-    font-size: 10px;
+    font-size: 13px;
 
 
   }
@@ -1928,12 +2168,14 @@ p {
   .list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
   }
 
   .nav_fila{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
 
   .list__item {
@@ -1949,17 +2191,7 @@ p {
     width: 100%;
   }
 
-  #btn_next {
-    --swiper-theme-color: #d15400;
-    z-index: 0;
-    border: 2px solid gray;
-    border-radius: 10px;
-    position: absolute;
-    left: 93%;
-    top: 40%;
-    padding: 35px 21px;
-    background: #bdc3c7;
-  }
+  
 
   .btn_ver {
     width: 100%;
@@ -1976,28 +2208,31 @@ p {
 /*Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
 
-  #navL {
+  #btn_next , #btn_prev{
     display: none;
+  }
+
+  #n1 i{
+      height: 25px;
+      display: flex;
+      width: 25px;
   }
   
 
-  #navC {
-    display: flex;
-    transition: 1s;
+  .nav__link{
+    padding: 5px;
+    font-size: 12px;
   }
 
 
-  .nav_column {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 
-  }
 
-  #n1 .nav_column {
-    width: 30%;
+
+
+  
+
+  #n1 {
+    width: 50%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -2005,12 +2240,12 @@ p {
 
   }
 
-  #n2 .nav_column {
-    width: 100%;
+  #n2{
+    width: 50%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 
   #n2 .list__login{
@@ -2018,7 +2253,7 @@ p {
   }
 
   #n2 .list__item {
-    width: 60%;
+    width: 20%;
   }
 
   .filtro_list {
@@ -2055,16 +2290,7 @@ p {
     justify-content: center;
   }
 
-  .nav__login {
-    width: auto;
-    color: #000000;
-    display: block;
-    padding: 5px 1em;
-    text-decoration: none;
-    border-radius: 25%;
-  }
-
-
+  
   #menu {
     width: 100px;
     height: 100%;
@@ -2072,7 +2298,7 @@ p {
     flex-direction: column;
   }
 
-  #menu h1 {
+  #menu h2 {
     margin: 0;
   }
 
@@ -2093,13 +2319,16 @@ p {
   }
 
   .nav__login {
+    font-size: 12px;
     width: auto;
     color: #000000;
     display: block;
-    padding: 10px 1em;
+    padding: 5px 5px;
     text-decoration: none;
     border-radius: 25%;
   }
+
+
 
   .contenedor_login {
     z-index: 1;
@@ -2202,7 +2431,7 @@ p {
     justify-content: center;
     padding: 15px;
     gap: 10px;
-}
+  }
 
   .img_card {
     width: 40px;
@@ -2261,7 +2490,7 @@ p {
     border-radius: 10px;
     position: absolute;
     left: 91%;
-    top: 40%;
+    top: 160px;
     padding: 35px 21px;
     background: #bdc3c7;
   }
@@ -2290,7 +2519,7 @@ p {
     border-radius: 10px;
     position: absolute;
     left: 1%;
-    top: 40%;
+    top: 160px;
     padding: 35px 21px;
     background: #bdc3c7;
   }
@@ -2321,4 +2550,621 @@ p {
   }
 
 
+}
+
+@media (max-width: 426px){
+
+  .nav_input{
+    display: none ;
+  }
+
+  .cont_list_item:hover{
+    cursor: pointer;
+  }
+
+  #desplegable{
+    width: 340px;
+    height: 100%;
+    top: 117px;
+    left: 0px;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 1s ease-out ;
+  }
+
+  
+
+  
+
+  
+
+  .nav_input:checked + #desplegable{
+    width: 340px;
+    height: 100%;
+    top: 117px;
+    left: 0px;
+    display: flex;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0s;
+  }
+
+  #desplegable_menu{
+    border-radius: 10px;
+    transition: 3s;
+    position: relative;
+    gap: 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  .group_item_sec{
+
+    gap: 10px;    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .title_list_item{
+    text-align: left;
+    font-size: 20px;
+    margin: 2px 0px;
+
+  }
+
+  .title_list_item a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .title_list_item span{
+    text-decoration: underline;
+    font-size: 15px;
+  }
+
+  
+
+  .group_item{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+    gap: 5px;
+
+  }
+
+  .item_list a{
+
+    padding: 7px 36px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    background: whitesmoke;
+    width: 100%;
+    justify-content: left;
+
+  }
+
+  .item_list a:hover{
+    background: #3b3f4b;
+    color: white;
+  }
+
+  
+
+  .cont_list_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #n2 .list__item {
+    width: 50%;
+  }
+
+  .list{
+    width: 100%;
+  }
+
+  #titulo{
+    font-size: 20px;
+  }
+
+  .nav_{
+    top: 55px;
+  }
+
+  #na1{
+    width: 100%;
+  }
+
+  #menu {
+    width: 50px;
+  }
+
+  #n2 .list__item {
+    width: 95%;
+  }
+
+  
+  .buscar{
+    width: 295px;
+  }
+  .card_ {
+    width: 95px;
+    height: 75px;
+  }
+
+  #t1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    background: #303440;
+    padding: 30px 50px;
+  }
+
+  #t2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #303440;
+    padding: 30px 50px;
+  }
+
+  #p2{
+    padding: 10px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    width: 100%;
+    
+    gap: 20px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    color: white;
+  }
+  
+  
+
+
+  #carrusel, #carrusel2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #t2 .d-block {
+    width: 245px!important;
+    height: 202px !important;
+    margin: 0 !important;
+    object-fit: contain;
+  }
+
+  
+
+  .list_categoria{
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  #btn_next , #btn_prev{
+    display: none;
+  }
+
+  #footer .contenedor{
+    padding: 25px 10px;
+  }
+
+  .title_footer{
+    font-size: 13px;
+  }
+
+ 
+}
+
+@media (max-width: 391px){
+  .nav_input{
+    display: none ;
+  }
+
+  .cont_list_item:hover{
+    cursor: pointer;
+  }
+
+  #desplegable{
+    width: 318px;
+    height: 100%;
+    top: 117px;
+    left: 0px;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 1s ease-out ;
+  }
+
+  
+
+  
+
+  
+
+  .nav_input:checked + #desplegable{
+    width: 318px;
+    height: 100%;
+    top: 117px;
+    left: 0px;
+    display: flex;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0s;
+  }
+
+  #desplegable_menu{
+    border-radius: 10px;
+    transition: 3s;
+    position: relative;
+    gap: 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  .group_item_sec{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .title_list_item{
+    text-align: left;
+    font-size: 20px;
+    margin: 2px 0px;
+
+  }
+
+  .title_list_item a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .title_list_item span{
+    text-decoration: underline;
+    font-size: 15px;
+  }
+
+  
+
+  .group_item{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+    gap: 5px;
+
+  }
+
+  .item_list a{
+
+    padding: 7px 36px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    background: whitesmoke;
+    width: 100%;
+    justify-content: left;
+
+  }
+
+  .item_list a:hover{
+    background: #3b3f4b;
+    color: white;
+  }
+
+  
+
+  .cont_list_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #n2 .list__item {
+    width: 50%;
+  }
+
+  
+
+  .list{
+    width: 100%;
+  }
+
+  #titulo{
+    font-size: 20px;
+  }
+
+  .nav_{
+    top: 55px;
+  }
+
+  #na1{
+    width: 100%;
+  }
+
+  #menu {
+    width: 50px;
+  }
+
+  #n2 .list__item {
+    width: 95%;
+  }
+
+  
+  .buscar{
+    width: 200px;
+  }
+
+  #t1 , #t2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #303440;
+    padding: 30px 50px;
+  }
+
+  #p1 , #p2{
+    padding: 10px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    width: 100%;
+    gap: 20px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    color: white;
+  }
+
+
+  #carrusel, #carrusel2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #t2 .d-block {
+    width: 245px!important;
+    height: 202px !important;
+    margin: 0 !important;
+    object-fit: contain;
+  }
+
+  .card_ {
+    width: 85px;
+    height: 80px;
+  }
+
+  .list_categoria{
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  #btn_next , #btn_prev{
+    display: none;
+  }
+
+  #footer .contenedor{
+    padding: 25px 10px;
+  }
+
+  .title_footer{
+    font-size: 13px;
+  }
+
+ 
+}
+
+@media (max-width: 320px){
+  .nav_input{
+    display: none ;
+  }
+
+  .cont_list_item:hover{
+    cursor: pointer;
+  }
+
+  #desplegable{
+    width: 250px;
+    height: 100%;
+    top: 117px;
+    left: 0px;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 1s ease-out ;
+  }
+
+  
+
+  
+
+  
+
+  .nav_input:checked + #desplegable{
+    width: 250px;
+    height: 100%;
+    top: 117px;
+    left: 0px;
+    display: flex;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0s;
+  }
+
+  #desplegable_menu{
+    border-radius: 10px;
+    transition: 3s;
+    position: relative;
+    gap: 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  .group_item_sec{
+    gap: 10px;    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .title_list_item{
+    text-align: left;
+    font-size: 20px;
+    margin: 2px 0px;
+
+  }
+
+  .title_list_item a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .title_list_item span{
+    text-decoration: underline;
+    font-size: 15px;
+  }
+
+  
+
+  .group_item{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+    gap: 5px;
+
+  }
+
+  .item_list a{
+
+    padding: 7px 36px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    background: whitesmoke;
+    width: 100%;
+    justify-content: left;
+
+  }
+
+  .item_list a:hover{
+    background: #3b3f4b;
+    color: white;
+  }
+
+  
+
+  .cont_list_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #n2 .list__item {
+    width: 50%;
+  }
+
+ 
+
+  #titulo{
+    font-size: 20px;
+  }
+
+  .nav_{
+    top: 55px;
+  }
+
+  #na1{
+    width: 100%;
+  }
+
+  #menu {
+    width: 50px;
+  }
+
+  #n2 .list__item {
+    width: 95%;
+  }
+
+  
+  .buscar{
+    width: 200px;
+  }
+
+  #t1 , #t2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #303440;
+    padding: 30px 50px;
+  }
+
+  #p1 , #p2{
+    padding: 10px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    width: 100%;
+    gap: 20px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    color: white;
+  }
+
+
+  #carrusel, #carrusel2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #t2 .d-block {
+    width: 245px!important;
+    height: 202px !important;
+    margin: 0 !important;
+    object-fit: contain;
+  }
+
+  .card_ {
+    width: 85px;
+    height: 80px;
+  }
+
+  .list_categoria{
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  #btn_next , #btn_prev{
+    display: none;
+  }
+
+  #footer .contenedor{
+    padding: 25px 10px;
+  }
+
+  .title_footer{
+    font-size: 13px;
+  }
+
+ 
 }
