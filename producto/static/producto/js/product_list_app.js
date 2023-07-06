@@ -7,6 +7,7 @@ const contenedorProductos = document.getElementById('list_product_scroll')
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 //SEXTO PASO
 const botonVaciar = document.getElementById('vaciar-carrito')
+const botonContinuar = document.getElementById('continuar-carrito')
 //SEXTIMO PASO, MODIFICAR LOS CONTADORES
 const contadorCarrito = document.getElementById('contadorCarrito')
 
@@ -24,6 +25,9 @@ botonVaciar.addEventListener('click', () => {
     actualizarCarrito()
 })
 
+botonContinuar.addEventListener('click', () => {
+    
+})
 //PRIMER PRIMER PASO, INYECTAR EL HTML
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
