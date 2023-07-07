@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from . models import Producto
 
 # Create your views here.
 def list_product(request):
-    context={}
+    producto= Producto.objects.all()
+    context={ 'producto': producto}
     return render(request, 'producto/listado_producto.html', context)
 
 def producto_0(request):

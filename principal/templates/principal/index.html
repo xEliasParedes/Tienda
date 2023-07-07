@@ -50,20 +50,20 @@
                     <li class="group_item_sec">
                       <div class="title_list_item"><a href="">PRODUCTOS... <span>ver todo</span></a></div>
                       <ul class="group_item">
-                        <li class="item_list"><a href="#0">Alimentos</a></li>
-                        <li class="item_list"><a href="">Cuidado</a></li>
-                        <li class="item_list"><a href="">Entretenimiento</a></li>
-                        <li class="item_list"><a href="">Accesorios</a></li>
-                        <li class="item_list"><a href="">Medicamento</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Alimentos</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Cuidado</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Entretenimiento</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Accesorios</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Medicamento</a></li>
                       </ul>
                     
                     </li>
                     <li class="group_item_sec">
                       <h2 class="title_list_item">INFORMACION</h2>
                       <ul class="group_item">
-                        <li class="item_list"><a href="">preguntas Precuentes</a></li>
-                        <li class="item_list"><a href="">contactanos</a></li>
-                        <li class="item_list"><a href="">sucursales</a></li>
+                        <li class="item_list"><a href="#0">preguntas Precuentes</a></li>
+                        <li class="item_list"><a href="#footer">contactanos</a></li>
+                        <li class="item_list"><a href="#0">sucursales</a></li>
                       </ul>
                     </li>
                     
@@ -377,143 +377,25 @@
           <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+              {% for producto in alimentos %}
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
+                  <img src="media/{{producto.imagen}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
+                    <h5 class="card-title">{{producto.nombre}}</h5>
+                    <p class="card-text">{{producto.descripcion}}</p>
                     <div class="card-price-conte">
                       <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
+                        <li id="old" class="price">${{producto.precio_old}}</li>
+                        <li id="new" class="price">${{producto.precio_new}}</li>
                       </ul>
                     </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
+                    <a href="{%url 'producto'%}" class="btn_ver">Ver Producto</a>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-            
-          </div>
+              {%endfor%}
+            </div>
           </div>
         </div>
       </div>
@@ -535,143 +417,25 @@
           <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+              {% for producto in cuidado %}
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
+                  <img src="media/{{producto.imagen}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
+                    <h5 class="card-title">{{producto.nombre}}</h5>
+                    <p class="card-text">{{producto.descripcion}}</p>
                     <div class="card-price-conte">
                       <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
+                        <li id="old" class="price">${{producto.precio_old}}</li>
+                        <li id="new" class="price">${{producto.precio_new}}</li>
                       </ul>
                     </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
+                    <a href="{%url 'producto'%}" class="btn_ver">Ver Producto</a>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-            
-          </div>
+              {%endfor%}
+            </div>
           </div>
         </div>
       </div>  
@@ -693,143 +457,25 @@
           <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+              {% for producto in entretenimiento %}
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
+                  <img src="media/{{producto.imagen}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
+                    <h5 class="card-title">{{producto.nombre}}</h5>
+                    <p class="card-text">{{producto.descripcion}}</p>
                     <div class="card-price-conte">
                       <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
+                        <li id="old" class="price">${{producto.precio_old}}</li>
+                        <li id="new" class="price">${{producto.precio_new}}</li>
                       </ul>
                     </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
+                    <a href="{%url 'producto'%}" class="btn_ver">Ver Producto</a>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-            
-          </div>
+              {%endfor%}
+            </div>
           </div>
         </div>
       </div>
@@ -853,143 +499,25 @@
           <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+              {% for producto in accesorios %}
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
+                  <img src="media/{{producto.imagen}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
+                    <h5 class="card-title">{{producto.nombre}}</h5>
+                    <p class="card-text">{{producto.descripcion}}</p>
                     <div class="card-price-conte">
                       <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
+                        <li id="old" class="price">${{producto.precio_old}}</li>
+                        <li id="new" class="price">${{producto.precio_new}}</li>
                       </ul>
                     </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
+                    <a href="{%url 'producto'%}" class="btn_ver">Ver Producto</a>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-            
-          </div>
+              {%endfor%}
+            </div>
           </div>
         </div>
       </div>
@@ -1011,143 +539,25 @@
           <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+              {% for producto in farmacia %}
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
+                  <img src="media/{{producto.imagen}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
+                    <h5 class="card-title">{{producto.nombre}}</h5>
+                    <p class="card-text">{{producto.descripcion}}</p>
                     <div class="card-price-conte">
                       <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
+                        <li id="old" class="price">${{producto.precio_old}}</li>
+                        <li id="new" class="price">${{producto.precio_new}}</li>
                       </ul>
                     </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
+                    <a href="{%url 'producto'%}" class="btn_ver">Ver Producto</a>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="{% static 'img/Relleno/producto1.jpg'%}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DRAGPHARMA</h5>
-                    <p class="card-text">FIT FORMULA SENIOR SB X 10 KG</p>
-                    <div class="card-price-conte">
-                      <ul class="card-price-list">
-                        <li id="old" class="price">$33.000</li>
-                        <li id="new" class="price">$20.000</li>
-                      </ul>
-                    </div>
-                    <a href="#" class="btn_ver">Ver Producto</a>
-                  </div>
-                </div>
-              </div>
-            
-          </div>
+              {%endfor%}
+            </div>
           </div>
         </div>
       </div>  

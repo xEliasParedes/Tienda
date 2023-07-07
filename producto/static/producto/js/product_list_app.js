@@ -120,7 +120,7 @@ const actualizarCarrito = () => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
         div.innerHTML = `
-        <a href="{% url 'producto'%}">${prod.nombre}</a>
+        <a href="/producto/producto_0/">${prod.nombre}</a>
         <p>Precio:${prod.precio_new}</p>
         <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
         <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="bi bi-trash-fill"></i></button>
