@@ -239,7 +239,6 @@ function menuMediano(){
           if(ubicacionSecundaria >= Desplazamiento){
             document.getElementById('cabecera').style.top = '-9px';
             document.getElementById('nav').style.top = '55px';
-            document.getElementById('img_product').style.top = '0px';
 
           }else{
             document.getElementById('cabecera').style.top = '-200px';
@@ -247,7 +246,6 @@ function menuMediano(){
             document.querySelectorAll('#code_menu ').forEach(function(checkElement) {
               checkElement.checked = false;
             });
-            document.getElementById('img_product').style.top = '520px';
    
           }
           ubicacionSecundaria = Desplazamiento;
@@ -265,7 +263,6 @@ function menuChico1(){
           if(ubicacionSecundaria >= Desplazamiento){
             document.getElementById('cabecera').style.top = '-9px';
             document.getElementById('nav').style.top = '55px';
-            document.getElementById('img_product').style.top = '0px';
 
           }else{
             document.getElementById('cabecera').style.top = '-200px';
@@ -273,8 +270,6 @@ function menuChico1(){
             document.querySelectorAll('#code_menu ').forEach(function(checkElement) {
               checkElement.checked = false;
             });
-            document.getElementById('img_product').style.top = '520px';
-   
           }
           ubicacionSecundaria = Desplazamiento;
       }
@@ -289,8 +284,7 @@ function menuChico2(){
         let Desplazamiento = window.pageYOffset;
           if(ubicacionSecundaria >= Desplazamiento){
             document.getElementById('cabecera').style.top = '-9px';
-            document.getElementById('nav').style.top = '55px';            
-            document.getElementById('img_product').style.top = '0px';
+            document.getElementById('nav').style.top = '55px';        
 
           }else{
             document.getElementById('cabecera').style.top = '-200px';
@@ -298,7 +292,6 @@ function menuChico2(){
             document.querySelectorAll('#code_menu ').forEach(function(checkElement) {
               checkElement.checked = false;
             });            
-            document.getElementById('img_product').style.top = '520px';
    
           }
           ubicacionSecundaria = Desplazamiento;

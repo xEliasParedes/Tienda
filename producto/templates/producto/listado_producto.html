@@ -43,22 +43,22 @@
                 <div class="nav_" id="desplegable">
                   <ul class="list" id="desplegable_menu">
                     <li class="group_item_sec">
-                      <div class="title_list_item"><a href="">PRODUCTOS... <span>ver todo</span></a></div>
+                      <div class="title_list_item"><a href="{%url 'list_product'%}">PRODUCTOS... <span>ver todo</span></a></div>
                       <ul class="group_item">
-                        <li class="item_list"><a href="#0">Alimentos</a></li>
-                        <li class="item_list"><a href="">Cuidado</a></li>
-                        <li class="item_list"><a href="">Entretenimiento</a></li>
-                        <li class="item_list"><a href="">Accesorios</a></li>
-                        <li class="item_list"><a href="">Medicamento</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Alimentos</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Cuidado</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Entretenimiento</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Accesorios</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Medicamento</a></li>
                       </ul>
                     
                     </li>
                     <li class="group_item_sec">
                       <h2 class="title_list_item">INFORMACION</h2>
                       <ul class="group_item">
-                        <li class="item_list"><a href="">preguntas Precuentes</a></li>
-                        <li class="item_list"><a href="">contactanos</a></li>
-                        <li class="item_list"><a href="">sucursales</a></li>
+                        <li class="item_list"><a href="#0">preguntas Precuentes</a></li>
+                        <li class="item_list"><a href="#footer">contactanos</a></li>
+                        <li class="item_list"><a href="#0">sucursales</a></li>
                       </ul>
                     </li>
                     
@@ -86,19 +86,19 @@
     
               <ul class="list__show">
                 <li class="list__inside">
-                  <a href="" class="nav__link nav__link--inside">Alimentos</a>
+                  <a href="{%url 'list_product'%}" class="nav__link nav__link--inside">Alimentos</a>
                 </li>
     
                 <li class="list__inside">
-                  <a href="" class="nav__link nav__link--inside">Cuidados</a>
+                  <a href="{%url 'list_product'%}" class="nav__link nav__link--inside">Cuidados</a>
                 </li>
     
                 <li class="list__inside">
-                  <a href="" class="nav__link nav__link--inside">Accesorios</a>
+                  <a href="{%url 'list_product'%}" class="nav__link nav__link--inside">Accesorios</a>
                 </li>
     
                 <li class="list__inside">
-                  <a href="" class="nav__link nav__link--inside">Farmacia</a>
+                  <a href="{%url 'list_product'%}" class="nav__link nav__link--inside">Farmacia</a>
                 </li>
               </ul>
             </li>
@@ -106,7 +106,7 @@
             <li class="list__item list__item--click" id="nosotros_item1">
               <div class="list__button list__button--click" id="nosotros_item2">
                 <img src="{% static 'producto/icon/info-circle-solid-24.png'%}" alt="Nosotros" class="list__img" />
-                <a href="#" class="nav__link">Nosotros</a>
+                <a  class="nav__link">Nosotros</a>
                 <img src="{% static 'producto/icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
               </div>
     
@@ -120,7 +120,7 @@
                 </li>
     
                 <li class="list__inside">
-                  <a href="#footer" class="nav__link nav__link--inside">FaQ</a>
+                  <a href="#0" class="nav__link nav__link--inside">FaQ</a>
                 </li>
               </ul>
             </li>

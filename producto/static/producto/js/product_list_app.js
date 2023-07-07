@@ -34,6 +34,7 @@ stockProductos.forEach((producto) => {
     div.classList.add('product')
     div.innerHTML = `
 
+    
     <div class="card">
         <img src="" class = "card-img-top" alt="...">
         <div class="card-body">
@@ -48,6 +49,7 @@ stockProductos.forEach((producto) => {
         <button id="agregar${producto.id}" class="btn_ver">Agregar <i class="bi bi-bag-fill"></i></button>
         </div>
     </div>
+    
     
 
     `

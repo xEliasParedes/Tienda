@@ -1563,6 +1563,10 @@ p {
 
 
 @media (max-width: 1024px) {
+  .img_cont_product img {
+    top: 0px;
+    width: 500px;
+  }
 
   .nav_{
     top: 67px;
@@ -1881,6 +1885,54 @@ p {
 
 /*Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+  .despacho .list__button {
+    display: flex;
+    flex-direction: row;
+  }
+  #boton-carrito {
+    width: 100%;
+  }
+
+  #myModal .modal-content {
+    display: flex;
+    height: 300px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 290px;
+    border-radius: 20px;
+    justify-content: center;
+  }
+
+  .list_pro_conte {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px 1px gray;
+    padding: 30px 10px 10px 10px;
+    margin: 5px;
+  }
+  .content {
+    padding: 17px;
+  }
+
+  .img_cont_product img {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cont_produc {
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor_filtro {
+    
+    margin: 20px 10px 0px 10px;
+    
+  }
 
   .modal-active {
     transition: all .5s;
@@ -2341,6 +2393,10 @@ p {
 
 /*Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
+  .list__button {
+    display: flex;
+    flex-direction: column;
+  }
   #na1 {
     width: 100%;
   }
@@ -2732,6 +2788,54 @@ p {
 }
 
 @media (max-width: 426px){
+  .list__button {
+    display: flex;
+    flex-direction: column;
+  }
+  #boton-carrito {
+    width: 100%;
+  }
+
+  #myModal .modal-content {
+    display: flex;
+    height: 300px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 290px;
+    border-radius: 20px;
+    justify-content: center;
+  }
+
+  .list_pro_conte {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px 1px gray;
+    padding: 30px 10px 10px 10px;
+    margin: 5px;
+  }
+  .content {
+    padding: 17px;
+  }
+
+  .img_cont_product img {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cont_produc {
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor_filtro {
+    
+    margin: 20px 10px 0px 10px;
+    
+  }
 
   #list_product_scroll {
     width: 85%;
@@ -3035,6 +3139,62 @@ p {
 }
 
 @media (max-width: 391px){
+  .list__button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #boton-carrito {
+    width: 100%;
+  }
+
+  #myModal .modal-content {
+    display: flex;
+    height: 300px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 290px;
+    border-radius: 20px;
+    justify-content: center;
+  }
+
+  .list_pro_conte {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px 1px gray;
+    padding: 30px 10px 10px 10px;
+    margin: 5px;
+  }
+  .content {
+    padding: 17px;
+  }
+
+  .img_cont_product img {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cont_produc {
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor_filtro {
+    
+    margin: 20px 10px 0px 10px;
+    
+  }
+  .contenedor_productos {
+    margin: 0 10px;
+    border: 1px solid gray;
+    border-radius: 13px;
+    width: 94%;
+    height: 25%;
+  }
 
   #list_product_scroll .card {
     width: 157px;
@@ -3308,6 +3468,49 @@ p {
 }
 
 @media (max-width: 320px){
+  .list__button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #boton-carrito {
+    width: 130%;
+  }
+
+  #myModal .modal-content {
+    display: flex;
+    height: 300px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 290px;
+    border-radius: 20px;
+    justify-content: center;
+  }
+
+  .list_pro_conte {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px 1px gray;
+    padding: 30px 10px 10px 10px;
+    margin: 5px;
+  }
+  .content {
+    padding: 17px;
+  }
+
+  .img_cont_product img {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cont_produc {
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
 
   .contenedor_filtro {
     

@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from producto.models import Producto, Sub_Categoria, Categoria
-from django.db.models import Q
+from producto.models import Producto
+
 
 # Create your views here.
 def index(request):
