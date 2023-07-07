@@ -14,8 +14,8 @@ class Producto(models.Model):
     precio_old = models.CharField(max_length=6)     
     marca =models.ForeignKey('Marca',on_delete=models.CASCADE, db_column='id_marca')          
     provedor =models.ForeignKey('Provedor', on_delete=models.CASCADE, db_column='id_provedor')     
-    despacho = models.BooleanField()    
-    retiro =  models.BooleanField() 
+    dis_despacho = models.BooleanField()    
+    dis_retiro =  models.BooleanField() 
     sub_categoria = models.ForeignKey('Sub_Categoria', on_delete=models.CASCADE, db_column='id_sub_categoria')
 
     def __str__(self):
@@ -42,7 +42,8 @@ class Despacho(models.Model):
     id_soli_des = models.AutoField(primary_key=True, db_column= 'id_soli_des')
     direccion = models.CharField(max_length=100)  
     num_casa_dep= models.CharField(max_length=3, blank=True, null=True)
-    info_add = models.CharField(max_length=100, blank=True, null=True)  
+    info_add = models.CharField(max_length=100, blank=True, null=True)
+    producto = models.ForeignKey('Producto', on_delete=models.CASCADE, db_column='id_producto')  
     comuna = models.ForeignKey('Comuna', on_delete=models.CASCADE,db_column='id_comuna')
     receptor =  models.CharField(max_length=65)
 
@@ -51,6 +52,7 @@ class Despacho(models.Model):
 
 class Retiro(models.Model):
     id_soli_ret = models.AutoField(primary_key=True,  db_column= 'id_soli_ret')
+    producto = models.ForeignKey('Producto', on_delete=models.CASCADE, db_column='id_producto')
     fecha_estimada = relativedelta(days=15)
     sucursal= models.ForeignKey('Sucursal', on_delete=models.CASCADE, db_column='id_sucursal')
     receptor =  models.CharField(max_length=65)
