@@ -1,12 +1,14 @@
 from django.db import models
 from dateutil.relativedelta import relativedelta
 
+
 # Create your models here.
 
 
 
 class Producto(models.Model):
     id_producto = models.AutoField(primary_key=True)
+    imagen = models.ImageField(upload_to="producto", null=True)
     nombre = models.CharField(max_length=35)          
     cantidad = models.CharField(max_length=3)        
     descripcion = models.CharField(max_length=330)    
