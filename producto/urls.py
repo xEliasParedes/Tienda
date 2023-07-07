@@ -1,10 +1,8 @@
-#from django.conf.urls import urls
+#from django.conf.urls import url
 from django.urls import path
 from . import views
 
-
-
 urlpatterns = [
-    path('', views.list_producto, name='list_product'),
-    path('ARCHIVO', views.producto, name='producto')
+    path ('list_product/',views.list_product, name='list_product'),
+    path ('producto_0/',views.producto_0, name='producto'),
 ]
